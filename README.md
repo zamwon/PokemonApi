@@ -36,12 +36,12 @@ Intern task for Jit Team.
 - Thymeleaf
 
 ## Setup
-Application provide two method of data delivery. User can :
-"Choose data loading method -> "type" - for cmd input, "file" - for loading data from file: "
+Application provide two method of usage:
+- "Choose http://localhost:8080/swagger-ui.html method ->  for using Swagger UI documentaton;
 
-- type in String input and charactersLookedFor from commandLine,
-"type" -> Provide string: "string" -> Provide character you want look for (as string): "charactersLokedFor";
-- load this data from file -> "file"
+- "Choose http://localhost:8080/ method ->  for entering INDEX page. Now you can navigate with buttons or use those endpoints:
+
+
 
 
 ## Contact
