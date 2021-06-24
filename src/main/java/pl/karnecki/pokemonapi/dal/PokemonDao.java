@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PokemonDao {
 
-    void savePokemon(Long id, String name, String type);
+    void  savePokemon(Long id, String name, String type);
     List<Pokemon> findAll();
     void updatePokemon(Pokemon pokemon);
     void deletePokemon(Long id);
