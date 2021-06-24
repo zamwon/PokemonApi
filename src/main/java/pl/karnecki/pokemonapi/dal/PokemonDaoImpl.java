@@ -42,7 +42,7 @@ public class PokemonDaoImpl implements PokemonDao {
 
     @Override
     public void updatePokemon(Pokemon newPokemon) {
-        String sql = "UPDATE pokemons SET pokemons.name = ? , pokemons.type = ? WHERE pokemons.Id = ? ";
+        String sql = "UPDATE pokemons SET name = ? , type = ? WHERE Id = ? ";
         jdbcTemplate.update(sql, newPokemon.getName(), newPokemon.getType(), newPokemon.getPokemonId());
     }
 
