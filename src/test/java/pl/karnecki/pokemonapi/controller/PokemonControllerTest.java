@@ -29,23 +29,35 @@ class PokemonControllerTest {
 
     private PokemonService pokemonService = new PokemonServiceImpl(pokemonDao);
 
-
-    @Test
-    @DisplayName("Should Return Selected Name")
-    public void shouldReturnSelectedName(){
-
-        //given
+    @BeforeEach
+    public void setUpDao() {
         pokemonDao.savePokemon(1L, "Pikachu", "Electric");
         pokemonDao.savePokemon(2L, "Raichu", "Electric");
         Pokemon pokemon1 = pokemonDao.getPokemonById(1L);
         Pokemon pokemon2 = pokemonDao.getPokemonById(2L);
         List<Pokemon> pokemons = Arrays.asList(pokemon1, pokemon2);
         doReturn(pokemons).when(pokemonDao).findByName("Pikachu");
+    }
+
+    @Test
+    @DisplayName("Should Return Selected Name")
+    public void shouldReturnSelectedName() {
+
         //when
         List<Pokemon> actual = pokemonService.getPokemonsByName("Pikachu");
 
         //then
         Assertions.assertEquals("Pikachu", actual.get(0).getName());
         Assertions.assertEquals(1L, actual.get(0).getPokemonId());
+    }
+    @Test
+    @DisplayName("Should No Return Any Name")
+    public void shouldNoReturnAnyName() {
+
+        //when
+        List<Pokemon> actual = pokemonService.getPokemonsByName("Blazej");
+
+        //then
+        assertTrue(actual.isEmpty());
     }
 }
