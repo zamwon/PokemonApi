@@ -42,7 +42,7 @@ class PokemonControllerTest {
 
 
         //then
-        when(pokemonDao.findByName("pikachu")).thenReturn(actual);
+        when(pokemonDao.findByName("Pikachu")).thenReturn(actual);
 //        Assertions.assertEquals(1L, actual.get(0).getPokemonId());
     }
     @Test
@@ -53,6 +53,7 @@ class PokemonControllerTest {
         List<Pokemon> actual = pokemonService.getPokemonsByName("Blazej");
 
         //then
-        assertTrue(actual.isEmpty());
+        when(pokemonDao.findByName("Blazej")).thenReturn(actual);
+//        assertTrue(actual.isEmpty());
     }
 }
