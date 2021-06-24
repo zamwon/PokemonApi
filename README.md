@@ -37,8 +37,8 @@ Intern task for Jit Team.
 
 ## Setup
 Application provide two method of usage:
-- "Choose http://localhost:8080/swagger-ui.html method ->  for using Swagger UI documentaton;
-- Lunch "POSTMAN" or other API development platform and operate with those endpoints:
+1. "Choose http://localhost:8080/swagger-ui.html method ->  for using Swagger UI documentaton;
+2. Lunch "POSTMAN" or other API development platform and operate with those endpoints:
 -GET http://localhost:8080/pokemon/{id} - Find desired pokemon by id (skip {} )
 -GET http://localhost:8080/pokemon/name/Name - Find desired pokemon by name -> Provide name with Capital letter 
 -GET http://localhost:8080/pokemon/type/Type - Find desired pokemon by type -> Provide type with Capital letter
@@ -54,7 +54,7 @@ Application provide two method of usage:
 -DELETE http://localhost:8080/pokemon/{id} -> Delete pokemon with provided id
 
 Todo
-- "Choose http://localhost:8080/ method ->  for entering INDEX page. Now you can navigate with buttons
+3. "Choose http://localhost:8080/ method ->  for entering INDEX page. Now you can navigate with buttons
 
 
 
