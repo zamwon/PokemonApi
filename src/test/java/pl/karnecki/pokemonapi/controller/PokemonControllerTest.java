@@ -1,6 +1,5 @@
 package pl.karnecki.pokemonapi.controller;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,8 +13,7 @@ import pl.karnecki.pokemonapi.service.PokemonServiceImpl;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 class PokemonControllerTest {
@@ -32,7 +30,7 @@ class PokemonControllerTest {
         pokemonDao.savePokemon(1L, "Pikachu", "Electric");
         pokemonDao.savePokemon(2L, "Raichu", "Electric");
         List<Pokemon> pokemons = pokemonDao.findAll();
-        doReturn(pokemons).when(pokemonDao).findByName("Pikachu");
+        doReturn(pokemons).when(pokemonDao).findAll();
     }
 
     @Test
@@ -42,9 +40,10 @@ class PokemonControllerTest {
         //when
         List<Pokemon> actual = pokemonDao.findByName("Pikachu");
 
+
         //then
-        Assertions.assertEquals("Pikachu", actual.get(0).getName());
-        Assertions.assertEquals(1L, actual.get(0).getPokemonId());
+        when(pokemonDao.findByName("pikachu")).thenReturn(actual);
+//        Assertions.assertEquals(1L, actual.get(0).getPokemonId());
     }
     @Test
     @DisplayName("Should No Return Any Name")
