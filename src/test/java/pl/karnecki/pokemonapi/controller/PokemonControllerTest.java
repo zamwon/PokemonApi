@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import pl.karnecki.pokemonapi.dal.PokemonDaoImpl;
@@ -23,7 +24,7 @@ class PokemonControllerTest {
     @Mock
     private PokemonDaoImpl pokemonDao = mock(PokemonDaoImpl.class);
 
-
+    @InjectMocks
     private PokemonService pokemonService = new PokemonServiceImpl(pokemonDao);
 
     @BeforeEach
