@@ -54,7 +54,7 @@ Application provide two method of usage:
 - DELETE http://localhost:8080/pokemon/{id} -> Delete pokemon with provided id
 
 Todo
-3. "Choose http://localhost:8080/ method ->  for entering INDEX page. Now you can navigate with buttons
+3. "Type http://localhost:8080/ in browser ->  for entering INDEX page. Now you can navigate the page with buttons
 
 
 
