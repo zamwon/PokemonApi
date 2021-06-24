@@ -39,19 +39,19 @@ Intern task for Jit Team.
 Application provide two method of usage:
 - "Choose http://localhost:8080/swagger-ui.html method ->  for using Swagger UI documentaton;
 - Lunch "POSTMAN" or other API development platform and operate with those endpoints:
-GET http://localhost:8080/pokemon/{id} - Find desired pokemon by id (skip {} )
-GET http://localhost:8080/pokemon/name/Name - Find desired pokemon by name -> Provide name with Capital letter 
-GET http://localhost:8080/pokemon/type/Type - Find desired pokemon by type -> Provide type with Capital letter
-GET http://localhost:8080/pokemon/all - Show all pokemons in Pokedex
-POST http://localhost:8080/pokemon/add-pokemon -> Add pokemon to Pokedex -> Provide body in format:
+--GET http://localhost:8080/pokemon/{id} - Find desired pokemon by id (skip {} )
+--GET http://localhost:8080/pokemon/name/Name - Find desired pokemon by name -> Provide name with Capital letter 
+--GET http://localhost:8080/pokemon/type/Type - Find desired pokemon by type -> Provide type with Capital letter
+--GET http://localhost:8080/pokemon/all - Show all pokemons in Pokedex
+--POST http://localhost:8080/pokemon/add-pokemon -> Add pokemon to Pokedex -> Provide body in format:
   {
     "pokemonId": {8},
     "name": "Name",
     "type": "Type"
     }
-PUT http://localhost:8080/pokemon -> Modify pokemon entry-> Provide body as JSON format
-PATCH http://localhost:8080/pokemon/{id} -> Modify pokemon field (name or type) if pokemon with provided id exist -> Provide body as JSON format
-DELETE http://localhost:8080/pokemon/{id} -> Delete pokemon with provided id
+--PUT http://localhost:8080/pokemon -> Modify pokemon entry-> Provide body as JSON format
+--PATCH http://localhost:8080/pokemon/{id} -> Modify pokemon field (name or type) if pokemon with provided id exist -> Provide body as JSON format
+--DELETE http://localhost:8080/pokemon/{id} -> Delete pokemon with provided id
 
 Todo
 - "Choose http://localhost:8080/ method ->  for entering INDEX page. Now you can navigate with buttons
